@@ -125,68 +125,54 @@ export const friendsContent = {
 // FEST page content
 export const festContent = {
   title: "The Whisky Partners FEST",
-  subtitle: "Annual Whisky Celebration",
-  date: "November 2025",
-  location: "Barcelona, Spain",
-  metaDescription: "Join The Whisky Partners FEST - an annual celebration of whisky culture featuring tastings, masterclasses, and the finest distilleries.",
-  intro: "Our flagship event bringing together whisky lovers, distillers, and industry professionals for an unforgettable celebration of whisky culture.",
-  highlights: [
-    "Exclusive tastings from world-renowned distilleries",
-    "Masterclasses led by industry experts",
-    "Networking with fellow enthusiasts",
-    "Discovery of rare and limited editions",
+  subtitle: "Madrid 6, 7 y 8 de febrero de 2025",
+  date: "6, 7 y 8 de febrero de 2025",
+  location: "Madrid, Spain",
+  metaDescription: "The Whisky Partners FEST - Un evento lúdico en el centro de Madrid, promoviendo un encuentro entre entusiastas del whisky y marcas o destilerías.",
+  intro: "The Whisky Partners Fest pretende ser un evento lúdico en el centro de Madrid, promoviendo un encuentro entre entusiastas del whisky y marcas o destilerías, en un espacio agradable con ambiente festivo, donde se promuevan productos y novedades, a la vez que nos vamos conociendo un poco más entre todos, y ayudamos a dar a conocer España al mundo del whisky, como un mercado en crecimiento. Y presentar a Madrid como ciudad whiskera en sus diversas propuestas. Haciendo hincapié en que el whisky, con conocimiento y responsabilidad, se disfruta mejor.",
+  eventNote: "El evento consta de tres días, entre los que el día 7 de febrero se realizará el evento principal con presencia de varias marcas. El día 6 de febrero se realizará una actividad opcional y con aforo limitado, al igual que el día 8.",
+  cronograma: [
+    {
+      day: "DÍA 1 (06-02)",
+      title: "Maridaje con puros",
+      location: "Dalmore Boutique Madrid",
+      note: "Actividad opcional con aforo limitado",
+    },
+    {
+      day: "DÍA 2 (07-02)",
+      title: "Cena maridaje y puros en rooftop",
+      location: "Hotel Indigo",
+      note: "Evento principal",
+    },
+    {
+      day: "DÍA 3 (08-02)",
+      title: "Recovery brunch",
+      location: "Por confirmar",
+      note: "Actividad opcional con aforo limitado",
+    },
   ],
-  schedule: [
-    {
-      time: "12:00",
-      title: "Doors Open",
-      description: "Welcome reception and registration",
-    },
-    {
-      time: "13:00",
-      title: "Opening Ceremony",
-      description: "Welcome address and introduction to the day's program",
-    },
-    {
-      time: "14:00",
-      title: "Masterclass: The Art of Blending",
-      description: "Learn the secrets of whisky blending from master blenders",
-    },
-    {
-      time: "15:30",
-      title: "Tasting Session I",
-      description: "Explore single malts from Scotland's finest regions",
-    },
-    {
-      time: "17:00",
-      title: "Masterclass: Cask Influence",
-      description: "Understanding how wood shapes whisky character",
-    },
-    {
-      time: "18:30",
-      title: "Tasting Session II",
-      description: "World whiskies: Japan, Ireland, and beyond",
-    },
-    {
-      time: "20:00",
-      title: "Networking Reception",
-      description: "Connect with fellow enthusiasts and industry professionals",
-    },
-    {
-      time: "22:00",
-      title: "Closing",
-      description: "Thank you and see you next year",
-    },
+  mainEventSchedule: [
+    { time: "19:30", title: "Discurso de apertura", description: "Con cóctel de bienvenida cortesía de Sackman" },
+    { time: "20:15", title: "Recital de poesía y whisky", description: "Por Jose Antonio Galante" },
+    { time: "20:30", title: "Degustaciones", description: "Y espacio para ponencias breves" },
+    { time: "21:00", title: "Menú maridaje", description: "Platos variados con whiskys proporcionados por La Potxola Whisky Shop" },
+    { time: "22:00", title: "Espacio para ponencias", description: "Y copas de Destilería Liber" },
+    { time: "23:00", title: "Maridaje con puros", description: "En rooftop y coctelería" },
+    { time: "00:30", title: "Clausura", description: "" },
   ],
   collaborators: [
-    { name: "Highland Distillery", image: "/images/collaborators/collab-placeholder.jpg" },
-    { name: "Oak & Grain Imports", image: "/images/collaborators/collab-placeholder.jpg" },
-    { name: "The Whisky Guild", image: "/images/collaborators/collab-placeholder.jpg" },
+    { name: "Whiskeando" },
+    { name: "Arasolis" },
+    { name: "Eddie's Klub" },
+    { name: "Absent Cocktail Room & Garden" },
+    { name: "Whisky Club Granada" },
+    { name: "Whisky Club Barcelona" },
   ],
   sponsors: [
-    { name: "Premium Spirits Co.", tier: "Gold", image: "/images/sponsors/sponsor-placeholder.jpg" },
-    { name: "Barrel Masters", tier: "Silver", image: "/images/sponsors/sponsor-placeholder.jpg" },
-    { name: "The Cask Collection", tier: "Silver", image: "/images/sponsors/sponsor-placeholder.jpg" },
+    { name: "Destilería Liber" },
+    { name: "La Potxola Whisky Shop" },
+    { name: "The Dalmore Boutique Madrid" },
+    { name: "Destilería Sackman" },
   ],
 }
 
