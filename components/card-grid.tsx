@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, MapPin } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface CardItem {
@@ -8,19 +8,33 @@ interface CardItem {
   location?: string
   description?: string
   externalUrl?: string
+  mapUrl?: string
 }
 
 interface CardGridProps {
   items: CardItem[]
-  columns?: 2 | 3 | 4
+  columns?: 2 | 3 | 4 | 5 | 6
+  variant?: "default" | "compact"
   className?: string
 }
 
-export function CardGrid({ items, columns = 3, className }: CardGridProps) {
+export function CardGrid({ items, columns = 3, variant = "default", className }: CardGridProps) {
   const gridCols = {
     2: "sm:grid-cols-2",
     3: "sm:grid-cols-2 lg:grid-cols-3",
     4: "sm:grid-cols-2 lg:grid-cols-4",
+    5: "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5",
+    6: "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6",
+  }
+
+  if (variant === "compact") {
+    return (
+      <div className={cn("grid gap-4", gridCols[columns], className)}>
+        {items.map((item, index) => (
+          <CompactCard key={index} item={item} />
+        ))}
+      </div>
+    )
   }
 
   return (
@@ -33,6 +47,8 @@ export function CardGrid({ items, columns = 3, className }: CardGridProps) {
 }
 
 function Card({ item }: { item: CardItem }) {
+  const linkUrl = item.externalUrl || item.mapUrl
+
   const content = (
     <div className="group relative flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
       {/* Image */}
@@ -54,16 +70,19 @@ function Card({ item }: { item: CardItem }) {
           {item.name}
         </h3>
         {item.location && (
-          <p className="mt-1 text-sm text-muted-foreground">{item.location}</p>
+          <p className="mt-1 text-sm text-muted-foreground flex items-center gap-1">
+            <MapPin className="h-3.5 w-3.5" />
+            {item.location}
+          </p>
         )}
         {item.description && (
           <p className="mt-2 text-sm text-muted-foreground leading-relaxed line-clamp-3">
             {item.description}
           </p>
         )}
-        {item.externalUrl && (
+        {linkUrl && (
           <div className="mt-auto pt-4 flex items-center gap-1 text-sm text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-            <span>Visit</span>
+            <span>{item.mapUrl ? "View on Map" : "Visit"}</span>
             <ExternalLink className="h-3.5 w-3.5" />
           </div>
         )}
@@ -71,10 +90,43 @@ function Card({ item }: { item: CardItem }) {
     </div>
   )
 
-  if (item.externalUrl) {
+  if (linkUrl) {
     return (
       <a
-        href={item.externalUrl}
+        href={linkUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return content
+}
+
+function CompactCard({ item }: { item: CardItem }) {
+  const linkUrl = item.externalUrl || item.mapUrl
+
+  const content = (
+    <div className="group relative flex flex-col items-center text-center p-4 rounded-lg border border-border bg-card transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
+      <h3 className="font-serif text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+        {item.name}
+      </h3>
+      {item.location && (
+        <p className="mt-1 text-xs text-muted-foreground flex items-center gap-1">
+          <MapPin className="h-3 w-3" />
+          {item.location}
+        </p>
+      )}
+    </div>
+  )
+
+  if (linkUrl) {
+    return (
+      <a
+        href={linkUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-lg"
