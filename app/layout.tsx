@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description: siteConfig.seoDescription,
     images: [
       {
-        url: '/opengraph-image',
+        url: '/images/social/opengraph-card.svg',
         width: 1200,
         height: 630,
         alt: `${siteConfig.name} social sharing image`,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.seoTitle,
     description: siteConfig.seoDescription,
-    images: ['/twitter-image'],
+    images: ['/images/social/twitter-card.svg'],
   },
   robots: {
     index: true,
