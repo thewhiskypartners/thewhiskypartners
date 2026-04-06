@@ -16,6 +16,7 @@ export const siteConfig = {
 }
 
 export const navigation = [
+  { name: "Home", href: "/" },
   { name: "The Whisky Partners FEST", href: "/the-whisky-partners-fest/" },
   { name: "About", href: "/about/" },
   { name: "Whisky Bars", href: "/whiskybars/" },
@@ -26,16 +27,68 @@ export const navigation = [
 export const homeContent = {
   hero: {
     title: "The Whisky Partners",
-    subtitle: "Learning and enjoying whisky through the promotion of bars, as well as the organisation of meetings and events. Sharing experiences with enthusiasts, and always insisting on responsible drinking.",
+    subtitle:
+      "Learning and enjoying whisky through promoting bars, meetings and events, insisting on responsible consumption.",
+    image:
+      "https://thewhiskypartners.com/wp-content/uploads/2025/12/1000078386.png?w=573",
+  },
+  latest: {
+    eyebrow: "Latest Activity",
+    title: "Madrid, whisky, and a community still growing",
+    paragraphs: [
+      "El 6 de febrero de 2026 visitamos la Destileria Sackman en Madrid, en un afterwork de lujo con introduccion a la historia de Sackman, el proceso de elaboracion del whisky y una excelente cata en buena compania.",
+      "El 7 de febrero a las 14h, en el Restaurante Panamera de Madrid, realizamos la segunda edicion de The Whisky Partners Fest, reuniendo entusiastas del whisky para poner en practica lo aprendido sobre este destilado y la educacion de beber con responsabilidad en un ambiente festivo y ameno.",
+      "La propuesta se completa con un menu gastronomico acompanado de diferentes whiskys provistos por marcas y tiendas afines.",
+    ],
+    videoUrl:
+      "https://video.wordpress.com/embed/jrJsU4a7?cover=1&autoPlay=1&controls=0&loop=1&muted=1&persistVolume=0&preloadContent=metadata&useAverageColor=1&hd=0",
+    images: [
+      "https://thewhiskypartners.com/wp-content/uploads/2025/12/1000078316-1.jpg?w=576",
+      "https://thewhiskypartners.com/wp-content/uploads/2025/12/1000089564.jpg?w=576",
+    ],
+  },
+  sackmanPreview: {
+    title: "La previa en Sackman",
+    subtitle: "Viernes 6 de febrero de 2026",
+    text:
+      "Una visita y cata previa en Madrid para abrir el fin de semana con contexto, historia y whisky bien servido.",
+    image:
+      "https://thewhiskypartners.com/wp-content/uploads/2026/01/1000093758.png?w=896",
+    ctaLabel: "Ver Sackman",
+    ctaUrl: "https://sackman.es/product/evento-whisky-partners-dia-6-de-febrero-a-las-18h/",
   },
   festPreview: {
-    title: "The Whisky Partners FEST",
-    summary: "Join us for our annual celebration of whisky culture. A gathering of enthusiasts, distillers, and bars united by their passion for exceptional spirits.",
-    cta: "Discover the FEST",
+    title: "About the Fest",
+    summary:
+      "It aims to be a fun event in the centre of Madrid, promoting a meeting between whisky bars, shops and enthusiasts with brands or distilleries, in a pleasant space with a festive atmosphere, where products and novelties are promoted while we get to know each other a little better.",
+    extra:
+      "It also helps present Spain as a growing whisky market and Madrid as a whisky city, always emphasising that whisky, with knowledge and responsibility, is best enjoyed.",
+    cta: "Learn more",
+    videoUrl:
+      "https://video.wordpress.com/embed/uYFnnS7y?cover=1&posterUrl=https%3A%2F%2Fthewhiskypartners.wordpress.com%2Fwp-content%2Fuploads%2F2025%2F03%2Fimg-20250124-wa0003.jpg&preloadContent=metadata&useAverageColor=1&hd=0",
   },
-  aboutPreview: {
-    title: "Who We Are",
-    text: "We are a community dedicated to the appreciation and culture of whisky, bringing together bars, enthusiasts, and industry professionals.",
+  community: {
+    bars: {
+      title: "Whisky Bars",
+      text: "Find whisky bars and venues around the world that share a commitment to good whisky, good service and the right atmosphere.",
+      cta: "Explore bars",
+    },
+    friends: {
+      title: "Friends",
+      text: "Discover the clubs, enthusiasts and collaborators that keep this whisky network active and connected.",
+      cta: "Meet our friends",
+    },
+  },
+  social: {
+    title: "Follow us!",
+    text:
+      "Stay close to new tastings, gatherings and community updates from The Whisky Partners.",
+    cta: "@thewhiskypartners",
+  },
+  join: {
+    title: "Join us!",
+    text:
+      "If you are a whisky enthusiast, venue, shop or brand and want to collaborate, get in touch and become part of the conversation.",
   },
 }
 
