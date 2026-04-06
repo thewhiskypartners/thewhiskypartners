@@ -22,25 +22,48 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
+    default: siteConfig.seoTitle,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.tagline,
+  description: siteConfig.seoDescription,
   keywords: ['whisky', 'whiskey', 'bars', 'events', 'tasting', 'fest', 'culture', 'community'],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
+  applicationName: siteConfig.seoTitle,
+  category: 'food and drink',
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  icons: {
+    icon: [
+      { url: siteConfig.favicon, type: 'image/png' },
+    ],
+    shortcut: [siteConfig.favicon],
+    apple: [
+      { url: siteConfig.favicon, sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     type: 'website',
     locale: seoDefaults.locale,
     url: siteConfig.url,
     siteName: seoDefaults.siteName,
-    title: siteConfig.name,
-    description: siteConfig.tagline,
+    title: siteConfig.seoTitle,
+    description: siteConfig.seoDescription,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} social sharing image`,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.tagline,
+    title: siteConfig.seoTitle,
+    description: siteConfig.seoDescription,
+    images: ['/twitter-image'],
   },
   robots: {
     index: true,
@@ -55,13 +78,16 @@ export const metadata: Metadata = {
   },
 }
 
+const googleAnalyticsId =
+  process.env.NEXT_PUBLIC_GA_ID ?? siteConfig.googleAnalyticsId
+
 // Organization schema for site-wide SEO
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: siteConfig.name,
   url: siteConfig.url,
-  description: siteConfig.tagline,
+  description: siteConfig.seoDescription,
   email: siteConfig.email,
   sameAs: [siteConfig.instagram],
 }
@@ -79,6 +105,26 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        {googleAnalyticsId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${googleAnalyticsId}');
+                `,
+              }}
+            />
+          </>
+        )}
         {/* Google Analytics / GTM placeholder - replace GTM-XXXXXX with your ID */}
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <Script

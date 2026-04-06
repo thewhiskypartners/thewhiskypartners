@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Instagram, Mail } from "lucide-react"
 import { siteConfig, navigation } from "@/lib/content"
 
@@ -10,9 +11,13 @@ export function Footer() {
           {/* Brand and tagline */}
           <div className="text-center lg:text-left lg:max-w-sm">
             <Link href="/" className="inline-block">
-              <span className="font-serif text-2xl font-semibold tracking-tight text-foreground">
-                {siteConfig.name}
-              </span>
+              <Image
+                src={siteConfig.logo}
+                alt={siteConfig.name}
+                width={250}
+                height={49}
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
               {siteConfig.tagline}

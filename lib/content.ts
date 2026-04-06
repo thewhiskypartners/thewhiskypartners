@@ -2,6 +2,13 @@
 export const siteConfig = {
   name: "The Whisky Partners",
   tagline: "Learning and enjoying whisky through the promotion of bars, as well as the organisation of meetings and events. Sharing experiences with enthusiasts, and always insisting on responsible drinking.",
+  logo: "/images/branding/logo.png",
+  favicon: "/images/branding/favicon.png",
+  seoTitle:
+    "Learning and enjoying whisky through promoting bars, meetings and events, insisting on responsible consumption.",
+  seoDescription:
+    "Learning and enjoying whisky through promoting bars, meetings and events, insisting on responsible consumption.",
+  googleAnalyticsId: "G-FAKE123456",
   url: "https://thewhiskypartners.com",
   instagram: "https://www.instagram.com/thewhiskypartners/",
   email: "info@thewhiskypartners.com",

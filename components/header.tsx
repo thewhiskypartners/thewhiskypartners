@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { siteConfig, navigation } from "@/lib/content"
@@ -13,10 +14,15 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="font-serif text-xl font-semibold tracking-tight text-foreground">
-            {siteConfig.name}
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src={siteConfig.logo}
+            alt={siteConfig.name}
+            width={250}
+            height={49}
+            priority
+            className="h-8 w-auto sm:h-10"
+          />
         </Link>
 
         {/* Desktop navigation */}
