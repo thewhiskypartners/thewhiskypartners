@@ -29,8 +29,7 @@ export const homeContent = {
     title: "The Whisky Partners",
     subtitle:
       "Learning and enjoying whisky through promoting bars, meetings and events, insisting on responsible consumption.",
-    image:
-      "https://thewhiskypartners.com/wp-content/uploads/2025/12/1000078386.png?w=573",
+    image: "/wp-content/uploads/2025/12/1000078386.png",
   },
   latest: {
     eyebrow: "Latest Activity",
@@ -249,7 +248,7 @@ export const festContent = {
         "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250206_201100.jpg?w=750",
         "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250206_211825.jpg?w=574",
         "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250206_211901.jpg?w=750",
-        "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250207_112244.jpg?w=750",
+        "/wp-content/uploads/2025/03/20250207_112244.jpg",
       ],
     },
     {
@@ -261,11 +260,11 @@ export const festContent = {
       venueLabel: "Hotel Indigo",
       venueUrl: "https://maps.app.goo.gl/tN5Hh5mXyQdxEcpj9",
       images: [
-        "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250207_203817.jpg?w=750",
-        "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250207_220416.jpg?w=574",
-        "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250208_001500.jpg?w=750",
-        "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250208_003159.jpg?w=750",
-        "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250207_234342.jpg?w=750",
+        "/wp-content/uploads/2025/03/20250207_203817.jpg",
+        "/wp-content/uploads/2025/03/20250207_220416.jpg",
+        "/wp-content/uploads/2025/03/20250208_001500.jpg",
+        "/wp-content/uploads/2025/03/20250208_003159.jpg",
+        "/wp-content/uploads/2025/03/20250207_234342.jpg",
       ],
     },
     {
@@ -275,9 +274,9 @@ export const festContent = {
       description:
         "Cierre relajado del festival con brunch de recuperacion y tiempo para seguir compartiendo.",
       images: [
-        "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250208_133743.jpg?w=574",
-        "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250208_130403.jpg?w=574",
-        "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250208_154331.jpg?w=574",
+        "/wp-content/uploads/2025/03/20250208_133743.jpg",
+        "/wp-content/uploads/2025/03/20250208_130403.jpg",
+        "/wp-content/uploads/2025/03/20250208_154331.jpg",
       ],
     },
   ],
@@ -285,12 +284,12 @@ export const festContent = {
     title: "Evento principal (dia 07-02)",
     intro: "Programa de actividades",
     images: [
-      "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250207_233916.jpg?w=750",
-      "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250207_234342.jpg?w=750",
-      "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250207_220416.jpg?w=574",
+      "/wp-content/uploads/2025/03/20250207_233916.jpg",
+      "/wp-content/uploads/2025/03/20250207_234342.jpg",
+      "/wp-content/uploads/2025/03/20250207_220416.jpg",
       "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250207_233938.jpg?w=750",
       "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250208_002320.jpg?w=1024",
-      "https://thewhiskypartners.com/wp-content/uploads/2025/03/20250208_003159.jpg?w=1024",
+      "/wp-content/uploads/2025/03/20250208_003159.jpg",
     ],
   },
   narrative: [
